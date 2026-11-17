@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | ChatApp</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="auth-container">
+    <div class="auth-card">
+
+        <h2>ChatApp</h2>
+        <p>Welcome back! Login to continue.</p>
+
+        <form id="login-form">
+
+            <input type="email" id="email" class="form-control mb-3"
+                placeholder="Email address" required>
+
+            <input type="password" id="password" class="form-control mb-3"
+                placeholder="Password" required>
+
+            <button type="submit" class="btn btn-primary w-100">
+                Login
+            </button>
+
+            <div id="error-message" class="text-danger mt-3"></div>
+
+        </form>
+
+        <p class="mt-4">
+            Don't have an account?
+            <a href="signup.html">Sign Up</a>
+        </p>
+
+    </div>
+</div>
+
+<script type="module" src="index.js"></script>
+</body>
+</html>

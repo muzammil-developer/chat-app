@@ -1,0 +1,268 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f1f3f6;
+}
+
+/* Login & Signup */
+
+.auth-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.auth-card {
+    background: white;
+    width: 100%;
+    max-width: 400px;
+    padding: 35px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 25px #00000012;
+}
+
+.auth-card h2 {
+    color: #2563eb;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.auth-card input {
+    padding: 12px;
+}
+
+.auth-card button {
+    padding: 12px;
+}
+
+
+/* Dashboard */
+
+.chat-container {
+    display: flex;
+    height: 100vh;
+    background: white;
+}
+
+/* Sidebar */
+
+.sidebar {
+    width: 300px;
+    min-width: 250px;
+    border-right: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-header {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+}
+
+.sidebar-header h4 {
+    color: #2563eb;
+    margin: 0;
+}
+
+.user-heading {
+    padding: 18px;
+    font-weight: bold;
+    color: #555;
+}
+
+#users-list {
+    overflow-y: auto;
+}
+
+.user-item {
+    width: 100%;
+    border: none;
+    background: white;
+    padding: 16px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.user-item:hover,
+.user-item.active {
+    background: #eaf1ff;
+    color: #2563eb;
+}
+
+
+/* Chat */
+
+.chat-area {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+#chat-header {
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+    background: white;
+}
+
+#chat-header h5 {
+    margin: 0;
+}
+
+#chat-box {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    background: #f5f7fb;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.welcome-message {
+    margin: auto;
+    color: #888;
+    text-align: center;
+}
+
+.user-message {
+    background: white;
+    padding: 10px 14px;
+    border-radius: 10px;
+    max-width: 75%;
+    align-self: flex-start;
+    box-shadow: 0 2px 5px #00000008;
+    overflow-wrap: anywhere;
+}
+
+.my-message {
+    align-self: flex-end;
+    background: #dbeafe;
+}
+
+.message-time {
+    display: block;
+    text-align: right;
+    font-size: 10px;
+    color: #777;
+    margin-top: 5px;
+}
+
+.delete-btn {
+    border: none;
+    background: none;
+    color: #dc3545;
+    font-size: 11px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+#chat-form {
+    display: flex;
+    padding: 15px;
+    gap: 10px;
+    border-top: 1px solid #ddd;
+}
+
+#message-input {
+    flex: 1;
+    min-width: 0;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    padding: 12px 18px;
+    outline: none;
+}
+
+#send-btn {
+    border: none;
+    border-radius: 25px;
+    background: #2563eb;
+    color: white;
+    padding: 0 25px;
+}
+
+#send-btn:disabled {
+    opacity: 0.5;
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .sidebar {
+        width: 110px;
+        min-width: 110px;
+    }
+
+    .sidebar-header {
+        padding: 12px 5px;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .sidebar-header h4 {
+        font-size: 16px;
+    }
+
+    .user-heading {
+        padding: 12px 5px;
+        font-size: 12px;
+        text-align: center;
+    }
+
+    .user-item {
+        padding: 13px 5px;
+        font-size: 12px;
+        text-align: center;
+        overflow-wrap: anywhere;
+    }
+
+    #chat-header {
+        padding: 15px 10px;
+    }
+
+    #chat-header h5 {
+        font-size: 14px;
+    }
+
+    #chat-box {
+        padding: 12px;
+    }
+
+    .user-message {
+        max-width: 90%;
+    }
+
+    #chat-form {
+        padding: 10px;
+    }
+
+    #send-btn {
+        padding: 0 15px;
+    }
+}
+
+.user-item strong {
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.you-label {
+    color: #777;
+    font-size: 12px;
+    font-weight: normal;
+}
